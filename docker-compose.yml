@@ -13,6 +13,7 @@ services:
     depends_on:
       - back-flask
       - back-fastapi
+      - back-django
   
   back-flask:
     restart: 'always'
@@ -31,3 +32,12 @@ services:
     entrypoint: /app/wsgi-entrypoint.sh
     expose:
       - 8000
+
+  back-django:
+    restart: 'always'
+    build: 
+      context: .
+      dockerfile: ./_/back/django/Dockerfile
+    entrypoint: /app/wsgi-entrypoint.sh
+    expose:
+      - 8001

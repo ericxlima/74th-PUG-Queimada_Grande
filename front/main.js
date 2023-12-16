@@ -31,4 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
   displayCards("data.json", "all-cards");
   displayCards("/flask-api/", "all-cards-api");
   displayCards("/fastapi-api/", "all-cards-api");
+  displayCards("/django-api/with_django/", "all-cards-api");
+  displayCards("/django-api/with_drf/", "all-cards-api");
 });
