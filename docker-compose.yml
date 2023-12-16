@@ -12,6 +12,7 @@ services:
       - ./_/nginx/conf:/etc/nginx/conf.d
     depends_on:
       - back-flask
+      - back-fastapi
   
   back-flask:
     restart: 'always'
@@ -21,3 +22,12 @@ services:
     entrypoint: /app/wsgi-entrypoint.sh
     expose:
       - 5000
+
+  back-fastapi:
+    restart: 'always'
+    build: 
+      context: .
+      dockerfile: ./_/back/fastapi/Dockerfile
+    entrypoint: /app/wsgi-entrypoint.sh
+    expose:
+      - 8000
