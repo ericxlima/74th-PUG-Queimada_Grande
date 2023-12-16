@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nginx: 
+    restart: always
+    build:
+      context: .
+      dockerfile: ./_/nginx/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./_/nginx/conf:/etc/nginx/conf.d
