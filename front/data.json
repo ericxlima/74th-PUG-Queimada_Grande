@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Jararaca Dormideira",
+    "imagem": "./assets/dormideira.JPG",
+    "descricao": "Existe em outros lugares"
+  },
+  {
+    "nome": "Jararaca Ilhoa",
+    "imagem": "./assets/ilhoa.jpg",
+    "descricao": "Única"
+  },
+  {
+    "nome": "Pitón",
+    "imagem": "./assets/piton.jpg",
+    "descricao": "Nova espécie"
+  }
+]
