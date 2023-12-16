@@ -10,3 +10,14 @@ services:
       - 80:80
     volumes:
       - ./_/nginx/conf:/etc/nginx/conf.d
+    depends_on:
+      - back-flask
+  
+  back-flask:
+    restart: 'always'
+    build: 
+      context: .
+      dockerfile: ./_/back/flask/Dockerfile
+    entrypoint: /app/wsgi-entrypoint.sh
+    expose:
+      - 5000
